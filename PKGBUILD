@@ -1,51 +1,23 @@
-# This is an example PKGBUILD file. Use this as a start to creating your own,
-# and remove these comments. For more information, see 'man PKGBUILD'.
-# NOTE: Please fill out the license field for your package! If it is unknown,
-# then please put 'unknown'.
-
-# Maintainer: Your Name <youremail@domain.com>
-pkgname=NAME
-pkgver=VERSION
+# Maintainer: Bartłomiej Bułat <bartek (dot) bulat (at) gmail (dot) com>
+pkgname=deadbeef-gnome-mmkeys
+pkgver=1.1
 pkgrel=1
 epoch=
-pkgdesc=""
-arch=()
-url=""
+pkgdesc="DeaDBeeF player Gnome (via DBus) multimedia keys plugin"
+arch=(i386 x86_64)
+url="https://github.com/barthez/deadbeef-gnome-mmkeys"
 license=('GPL')
-groups=()
-depends=()
-makedepends=()
-checkdepends=()
-optdepends=()
-provides=()
-conflicts=()
-replaces=()
-backup=()
-options=()
-install=
-changelog=
-source=($pkgname-$pkgver.tar.gz
-        $pkgname-$pkgver.patch)
-noextract=()
-md5sums=() #generate with 'makepkg -g'
-
-prepare() {
-	cd "$srcdir/$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
-}
+depends=(deadbeef glib2)
+makedepends=(make git)
+source=(deadbeef_gnome_mmkeys::git+https://github.com/barthez/deadbeef-gnome-mmkeys.git)
+md5sums=('SKIP')
 
 build() {
-	cd "$srcdir/$pkgname-$pkgver"
-	./configure --prefix=/usr
+	cd "$srcdir/deadbeef_gnome_mmkeys"
 	make
 }
 
-check() {
-	cd "$srcdir/$pkgname-$pkgver"
-	make -k check
-}
-
 package() {
-	cd "$srcdir/$pkgname-$pkgver"
-	make DESTDIR="$pkgdir/" install
+	cd "$srcdir/deadbeef_gnome_mmkeys"
+	make ROOTDIR="$pkgdir/" install
 }
