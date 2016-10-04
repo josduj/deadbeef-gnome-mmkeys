@@ -37,7 +37,8 @@
 #include <stdio.h>
 #include <gio/gio.h>
 #include <glib.h>
-#include <deadbeef/deadbeef.h>
+#include </opt/deadbeef/include/deadbeef/deadbeef.h>
+#include <string.h>
 
 #define NAME "ddb_gnome_mmkeys"
 #define DEBUG

@@ -1,27 +1,17 @@
-DeaDBeeF player Gnome (via DBus) multimedia keys plugin
-Author Ruslan Khusnullin <ruslan.khusnullin@gmail.com>
-Updates by Bartlomiej Bułat <bartek.bulat@gmail.com>
-
+Fork of [barthez/deadbeef-gnome-mmkeys](https://github.com/barthez/deadbeef-gnome-mmkeys) with fix for Ubuntu and its derivatives.  
 This plugin adds support for Gnome (via DBus) multimedia keys to DeaDBeeF player.
 
-To get sources:
-* You will need git
-$ git clone https://github.com/barthez/deadbeef-gnome-mmkeys.git
+__To get sources:__  
+You will need git  
+`$ git clone https://github.com/josduj/deadbeef-gnome-mmkeys.git`
 
-To build:
-$ cd deadbeef-gnome-mmkeys
-$ make
+__To build:__  
+`$ cd deadbeef-gnome-mmkeys`  
+`$ make`
 
-To install:
-$ sudo make install
-(copies ddb_gnome_mmkeys.so file to /usr/lib/deadbeef/)
+__To install:__  
+`$ sudo make install`  
+(copies ddb_gnome_mmkeys.so file to /opt/deadbeef/lib/deadbeef)
 
-To clean:
-$ make clean
-
-Original project:
-see: https://code.google.com/p/deadbeef-gnome-mmkeys/
-
-
-Arch Linux package:
-https://aur.archlinux.org/packages/deadbeef-gnome-mmkeys/
+__To clean:__  
+`$ make clean`

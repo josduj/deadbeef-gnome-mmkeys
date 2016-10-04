@@ -4,7 +4,7 @@ LIBS = $(shell pkg-config --libs gio-2.0 glib-2.0)
 OPTIONS = -fPIC -shared
 NAME = ddb_gnome_mmkeys
 ROOTDIR = /
-INSTALL_DIR = usr/lib/deadbeef
+INSTALL_DIR = opt/deadbeef/lib/deadbeef
 
 all: plugin
 
